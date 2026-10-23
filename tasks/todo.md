@@ -205,15 +205,15 @@
 **Description:** Add a compact progress view, daily goal completion and streak calculation, plus a small privacy-conscious analytics event set to assess the core learning loop.
 
 **Acceptance criteria:**
-- [ ] Progress view reflects completed lessons, reviewed concepts, and daily goal status from persisted records.
-- [ ] Streak calculation handles day boundaries and missing days deterministically.
-- [ ] Events capture onboarding, lesson start/completion, review completion, and return without sending exercise answers or sensitive content.
-- [ ] Motion and rewards remain optional/nonessential and honor reduced-motion preferences.
+- [x] Progress view reflects completed lessons, reviewed concepts, and daily goal status from persisted records.
+- [x] Streak calculation handles day boundaries and missing days deterministically.
+- [x] Events capture onboarding, lesson start/completion, review completion, and return without sending exercise answers or sensitive content.
+- [x] Motion and rewards remain optional/nonessential and honor reduced-motion preferences.
 
 **Verification:**
-- [ ] Unit checks cover streak/day-boundary behavior and event payload shape.
-- [ ] Agent-browser verifies the progress view before and after a completed session.
-- [ ] Inspect emitted analytics payloads for data minimization.
+- [x] Unit checks cover streak/day-boundary behavior and event payload shape.
+- [x] Agent-browser verifies the progress view before and after a completed session.
+- [x] Inspect emitted analytics payloads for data minimization.
 
 **Dependencies:** Tasks 6–9.
 
@@ -226,15 +226,15 @@
 **Description:** Close visual and behavioral gaps in key flows, check reduced motion, keyboard/touch interaction, empty/loading/error states, and prepare production configuration with secrets and migrations documented.
 
 **Acceptance criteria:**
-- [ ] Key onboarding, path, lesson, review, and progress screens work at phone and desktop sizes.
-- [ ] Interactive controls have visible focus, semantic labels, and sufficient contrast; reduced-motion mode suppresses nonessential movement.
-- [ ] Errors, loading, empty content, missing audio, and offline/network failure have understandable recovery states.
-- [ ] Deployment setup documents environment variables, database migrations, and the production runtime choice.
+- [x] Key onboarding, path, lesson, review, and progress screens work at phone and desktop sizes.
+- [x] Interactive controls have visible focus, semantic labels, and sufficient contrast; reduced-motion mode suppresses nonessential movement.
+- [x] Errors, loading, empty content, missing audio, and offline/network failure have understandable recovery states.
+- [x] Deployment setup documents environment variables, database migrations, and the production runtime choice.
 
 **Verification:**
-- [ ] Run agent-browser Lightpanda smoke path and Chrome visual/browser-error review.
-- [ ] Run all unit checks, both typecheck lanes, Biome, and production build.
-- [ ] Review the full diff and verify a clean checkout can reproduce the documented workflow.
+- [x] Run agent-browser Lightpanda smoke path and Chrome visual/browser-error review.
+- [x] Run all unit checks, both typecheck lanes, Biome, and production build.
+- [x] Review the full diff and verify a clean checkout can reproduce the documented workflow.
 
 **Dependencies:** Task 10.
 
@@ -244,7 +244,7 @@
 
 ## Checkpoint: MVP complete
 
-- [ ] All acceptance criteria are met and each verification result is recorded honestly.
-- [ ] Core learner loop succeeds from onboarding through review and return.
-- [ ] No test command reports zero collected tests; browser commands execute against the built app.
-- [ ] No unresolved high-impact auth, content, or deployment blocker remains.
+- [x] All acceptance criteria are met and each verification result is recorded honestly.
+- [x] Core learner loop succeeds from onboarding through review and return.
+- [x] No test command reports zero collected tests; browser commands execute against the built app.
+- [x] No unresolved high-impact auth, content, or deployment blocker remains.

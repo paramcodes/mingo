@@ -47,6 +47,12 @@ export default async function HomePage() {
 						<span>Review</span>
 					</Link>
 					<Link
+						href="/progress"
+						className="flex items-center gap-3 px-4 py-2.5 rounded-xl text-[#57534E] hover:bg-[#F3ECE0] font-medium text-sm transition-colors"
+					>
+						<span>Progress</span>
+					</Link>
+					<Link
 						href={learner ? "/onboarding" : "/login"}
 						className="flex items-center gap-3 px-4 py-2.5 rounded-xl text-[#57534E] hover:bg-[#F3ECE0] font-medium text-sm transition-colors"
 					>

@@ -130,6 +130,12 @@ export default function ReviewPage() {
 							Review
 						</Link>
 						<Link
+							href="/progress"
+							className="flex items-center gap-3 px-4 py-2.5 rounded-xl text-[#57534E] hover:bg-[#F3ECE0] font-medium text-sm transition-colors"
+						>
+							Progress
+						</Link>
+						<Link
 							href="/login"
 							className="flex items-center gap-3 px-4 py-2.5 rounded-xl text-[#57534E] hover:bg-[#F3ECE0] font-medium text-sm transition-colors"
 						>

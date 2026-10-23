@@ -6,6 +6,7 @@ This repository is **Mingo**, a gold-themed language learning web application bu
 
 For full module boundaries, domain layouts, and product terminology, see:
 - [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md)
+- [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md)
 - [`tasks/plan.md`](tasks/plan.md) and [`tasks/todo.md`](tasks/todo.md)
 
 ### Layer Rules
