@@ -15,6 +15,8 @@
 		"test": "bun test",
 		"test:browser:lightpanda": "agent-browser --engine lightpanda open http://localhost:3000 && agent-browser snapshot",
 		"test:browser:chrome": "agent-browser --engine chrome open http://localhost:3000 && agent-browser errors",
+		"generate:state-chart": "bun run scripts/generate-state-chart.ts",
+		"capture:media": "bun run scripts/capture-media.ts",
 		"verify": "bun run lint && bun run typecheck && bun test && bun run build"
 	},
 	"dependencies": {
@@ -32,6 +34,7 @@
 		"@types/react": "^19.3.0",
 		"@types/react-dom": "^19.3.0",
 		"lefthook": "^2.2.2",
+		"pele": "^1.9.0",
 		"postcss": "^8.5.31",
 		"tailwindcss": "^4.3.3",
 		"typescript": "^7.0.2"

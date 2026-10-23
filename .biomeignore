@@ -2,3 +2,5 @@
 node_modules/
 bun.lock
 tasks/
+docs/assets/
+.data/
