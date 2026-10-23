@@ -1,0 +1,11 @@
+# Lefthook Git Hooks Configuration
+# Fast checks on staged files. Emergency bypass: LEFTHOOK=0 git commit or git commit --no-verify
+
+pre-commit:
+  parallel: true
+  commands:
+    biome-check:
+      glob: "*.{js,ts,jsx,tsx,json,css,mjs}"
+      run: bun x biome check --no-errors-on-unmatched --files-ignore-unknown=true {staged_files}
+    typecheck:
+      run: bun run typecheck:fast

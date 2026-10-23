@@ -7,14 +7,14 @@
 **Description:** Create a responsive Next.js App Router application with TypeScript, Bun, and a minimal route/shell. Establish the gold-theme token entry point without building full feature screens.
 
 **Acceptance criteria:**
-- [ ] A clean checkout can install and start the app with Bun; the initial route renders.
-- [ ] The app shell responds at phone and desktop widths and uses the project-owned color tokens.
-- [ ] No product UI imports Duolingo marks, characters, copy, or proprietary fonts.
+- [x] A clean checkout can install and start the app with Bun; the initial route renders.
+- [x] The app shell responds at phone and desktop widths and uses the project-owned color tokens.
+- [x] No product UI imports Duolingo marks, characters, copy, or proprietary fonts.
 
 **Verification:**
-- [ ] `bun install --frozen-lockfile` succeeds from a clean checkout.
-- [ ] `bun run dev` starts and the root route returns successfully over HTTP.
-- [ ] Inspect the initial route at phone and desktop widths in Chrome.
+- [x] `bun install --frozen-lockfile` succeeds from a clean checkout.
+- [x] `bun run dev` starts and the root route returns successfully over HTTP.
+- [x] Inspect the initial route at phone and desktop widths in Chrome.
 
 **Dependencies:** None.
 
@@ -27,13 +27,13 @@
 **Description:** Define the domain-oriented layout, dependency directions, server/client boundaries, and current product vocabulary. Add one concise root `AGENTS.md` that routes future sessions to the architecture and task docs.
 
 **Acceptance criteria:**
-- [ ] Root `AGENTS.md` is concise and points to `docs/ARCHITECTURE.md`; no duplicate instruction files drift.
-- [ ] Routes/composition, feature domains, shared calculations, and server database access have explicit locations and one-way dependency rules.
-- [ ] Content, progress, lesson, review, and auth terminology is consistent in docs.
+- [x] Root `AGENTS.md` is concise and points to `docs/ARCHITECTURE.md`; no duplicate instruction files drift.
+- [x] Routes/composition, feature domains, shared calculations, and server database access have explicit locations and one-way dependency rules.
+- [x] Content, progress, lesson, review, and auth terminology is consistent in docs.
 
 **Verification:**
-- [ ] Review the route and source tree against the architecture document.
-- [ ] Confirm all commands recorded in `AGENTS.md` exist in package scripts or docs.
+- [x] Review the route and source tree against the architecture document.
+- [x] Confirm all commands recorded in `AGENTS.md` exist in package scripts or docs.
 
 **Dependencies:** Task 1.
 
@@ -46,13 +46,13 @@
 **Description:** Configure Biome as the only JS/TS formatter and linter, and Lefthook for fast staged-file checks. Keep hooks deterministic and leave longer checks to CI.
 
 **Acceptance criteria:**
-- [ ] Biome format/check scripts work and no second JS/TS formatter or linter is configured.
-- [ ] Lefthook runs only fast checks on staged files and has a documented bypass for emergency use.
-- [ ] CI can run the same Biome check without relying on installed git hooks.
+- [x] Biome format/check scripts work and no second JS/TS formatter or linter is configured.
+- [x] Lefthook runs only fast checks on staged files and has a documented bypass for emergency use.
+- [x] CI can run the same Biome check without relying on installed git hooks.
 
 **Verification:**
-- [ ] Run the Biome scripts and inspect exit codes.
-- [ ] Confirm a staged formatting/lint violation is caught by Lefthook.
+- [x] Run the Biome scripts and inspect exit codes.
+- [x] Confirm a staged formatting/lint violation is caught by Lefthook.
 
 **Dependencies:** Tasks 1 and 2.
 
@@ -65,15 +65,15 @@
 **Description:** Add canonical Bun scripts, adopt `tsrs` as the requested fast checker, retain `tsc --noEmit` as the reference lane while compatibility is assessed, and configure CI with frozen Bun installs.
 
 **Acceptance criteria:**
-- [ ] `bun.lock` is committed and CI installs with `bun install --frozen-lockfile`.
-- [ ] `tsrs` and `tsc --noEmit` both run against the framework configuration; their initial results and incompatibilities are documented.
-- [ ] CI runs frozen install, Biome, both typecheck lanes, Bun unit tests, and production build without global tools.
-- [ ] Deployment uses Node unless a separate Bun runtime deployment check demonstrates compatibility.
+- [x] `bun.lock` is committed and CI installs with `bun install --frozen-lockfile`.
+- [x] `tsrs` and `tsc --noEmit` both run against the framework configuration; their initial results and incompatibilities are documented.
+- [x] CI runs frozen install, Biome, both typecheck lanes, Bun unit tests, and production build without global tools.
+- [x] Deployment uses Node unless a separate Bun runtime deployment check demonstrates compatibility.
 
 **Verification:**
-- [ ] Run all configured package scripts locally and inspect exit codes.
-- [ ] Run a clean CI-equivalent sequence with frozen lockfile.
-- [ ] Confirm the unit test command is Bun's built-in `bun test`.
+- [x] Run all configured package scripts locally and inspect exit codes.
+- [x] Run a clean CI-equivalent sequence with frozen lockfile.
+- [x] Confirm the unit test command is Bun's built-in `bun test`.
 
 **Dependencies:** Tasks 1–3.
 
@@ -86,14 +86,14 @@
 **Description:** Pin/configure Vercel `agent-browser` and verify both its Lightpanda engine and Chrome engine. Use Lightpanda for fast supported DOM interaction and Chrome for rendered layout, screenshots, and browser behaviors Lightpanda does not support.
 
 **Acceptance criteria:**
-- [ ] One documented CLI command opens the local app and captures a useful DOM snapshot in Lightpanda.
-- [ ] One documented CLI command opens the local app in Chrome and captures a screenshot plus console/page errors.
-- [ ] The project does not add Playwright Test as its test runner; any required browser libraries are only those agent-browser itself needs.
-- [ ] Unsupported Lightpanda behavior has a documented Chrome fallback.
+- [x] One documented CLI command opens the local app and captures a useful DOM snapshot in Lightpanda.
+- [x] One documented CLI command opens the local app in Chrome and captures a screenshot plus console/page errors.
+- [x] The project does not add Playwright Test as its test runner; any required browser libraries are only those agent-browser itself needs.
+- [x] Unsupported Lightpanda behavior has a documented Chrome fallback.
 
 **Verification:**
-- [ ] Run both commands against the local app and record browser/engine versions.
-- [ ] Confirm agent-browser reports browser errors and screenshot output as expected.
+- [x] Run both commands against the local app and record browser/engine versions.
+- [x] Confirm agent-browser reports browser errors and screenshot output as expected.
 
 **Dependencies:** Tasks 1 and 4.
 
@@ -103,9 +103,9 @@
 
 ## Checkpoint: Foundation
 
-- [ ] Bun frozen install, Biome, Lefthook, both typecheck lanes, and build complete as documented.
-- [ ] Agent-browser works with Lightpanda for DOM checks and Chrome for visual checks.
-- [ ] Architecture and gold-theme tokens reviewed before feature development.
+- [x] Bun frozen install, Biome, Lefthook, both typecheck lanes, and build complete as documented.
+- [x] Agent-browser works with Lightpanda for DOM checks and Chrome for visual checks.
+- [x] Architecture and gold-theme tokens reviewed before feature development.
 
 ## Phase 2: First Learning Loop
 

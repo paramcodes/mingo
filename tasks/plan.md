@@ -84,15 +84,15 @@ See `tasks/todo.md` for task acceptance criteria, verification, dependencies, an
 
 ## Risks and Mitigations
 
-| Risk | Impact | Mitigation |
-|---|---|---|
-| `tsrs` targets TypeScript 7 and may differ in framework/library diagnostics | Medium | Run a compatibility spike; retain `tsc --noEmit` in CI as the reference until parity is confirmed. |
+| Risk                                                                               | Impact | Mitigation                                                                                                             |
+| ---------------------------------------------------------------------------------- | ------ | ---------------------------------------------------------------------------------------------------------------------- |
+| `tsrs` targets TypeScript 7 and may differ in framework/library diagnostics        | Medium | Run a compatibility spike; retain `tsc --noEmit` in CI as the reference until parity is confirmed.                     |
 | Lightpanda is headless without graphical rendering and has partial Web API support | Medium | Use Lightpanda for fast supported DOM flows; use agent-browser with Chrome for screenshot/layout and unsupported APIs. |
-| Agent-browser and Lightpanda versions/options evolve quickly | Medium | Pin the CLI and engine in project docs/config; validate the combined invocation before feature implementation. |
-| Supabase SSR package is beta | Medium | Validate session refresh, server auth checks, and RLS before relying on it; keep auth access behind a server boundary. |
-| Three motion systems can create inconsistent timing and cleanup | Medium | Assign Motion/Rive/GSAP distinct roles and prefer Motion unless an authored asset or timeline requires another tool. |
-| A full language curriculum is content-heavy | High | Limit MVP to one defined course slice and establish a content schema/authoring workflow early. |
-| Gold-yellow palette can reduce readability | Medium | Pair gold accents with deep ink text; check contrast for all semantic states and interactive controls. |
+| Agent-browser and Lightpanda versions/options evolve quickly                       | Medium | Pin the CLI and engine in project docs/config; validate the combined invocation before feature implementation.         |
+| Supabase SSR package is beta                                                       | Medium | Validate session refresh, server auth checks, and RLS before relying on it; keep auth access behind a server boundary. |
+| Three motion systems can create inconsistent timing and cleanup                    | Medium | Assign Motion/Rive/GSAP distinct roles and prefer Motion unless an authored asset or timeline requires another tool.   |
+| A full language curriculum is content-heavy                                        | High   | Limit MVP to one defined course slice and establish a content schema/authoring workflow early.                         |
+| Gold-yellow palette can reduce readability                                         | Medium | Pair gold accents with deep ink text; check contrast for all semantic states and interactive controls.                 |
 
 ## Open Questions / Assumptions
 

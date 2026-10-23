@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+    branches: [master, main]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.4.3
+
+      - name: Install dependencies (frozen lockfile)
+        run: bun install --frozen-lockfile
+
+      - name: Check code formatting and linting (Biome)
+        run: bun run lint
+
+      - name: Typecheck - Reference (tsc)
+        run: bun run typecheck
+
+      - name: Typecheck - Fast (tsrs)
+        run: bun run typecheck:fast
+
+      - name: Run unit tests (Bun test)
+        run: bun test
+
+      - name: Build Next.js application
+        run: bun run build
