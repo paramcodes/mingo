@@ -114,15 +114,15 @@
 **Description:** Set up Supabase access behind server boundaries and add sign-up/sign-in plus onboarding for target course and daily goal. Persist a learner profile with Row Level Security. Keep placement optional unless starter content supports it.
 
 **Acceptance criteria:**
-- [ ] A learner can create an account, sign in, and complete onboarding.
-- [ ] Course and daily-goal choices persist and appear when the learner returns.
-- [ ] Authenticated routes and learner-owned rows are protected by server checks and database policies.
-- [ ] Loading, invalid-input, and auth-failure states are usable with keyboard and touch.
+- [x] A learner can create an account, sign in, and complete onboarding.
+- [x] Course and daily-goal choices persist and appear when the learner returns.
+- [x] Authenticated routes and learner-owned rows are protected by server checks and database policies.
+- [x] Loading, invalid-input, and auth-failure states are usable with keyboard and touch.
 
 **Verification:**
-- [ ] Run focused service/schema checks and the agent-browser auth/onboarding flow.
-- [ ] Verify unauthenticated access is rejected and one learner cannot read another learner's profile.
-- [ ] Validate session refresh and server auth behavior with the selected Supabase SSR integration.
+- [x] Run focused service/schema checks and the agent-browser auth/onboarding flow.
+- [x] Verify unauthenticated access is rejected and one learner cannot read another learner's profile.
+- [x] Validate session refresh and server auth behavior with the selected Supabase SSR integration.
 
 **Dependencies:** Tasks 1–5.
 
@@ -135,15 +135,15 @@
 **Description:** Add the starter-course content schema and a small curated unit, then implement the learner path with current, completed, locked, and resume states. Keep course content separate from rendering.
 
 **Acceptance criteria:**
-- [ ] A learner sees the current lesson, completed lessons, and the next available step.
-- [ ] Course and unit structure is versioned and validated against a runtime schema.
-- [ ] Current position and lesson availability derive from learner progress rather than presentation-only state.
-- [ ] Content data can represent accepted answer variants, explanations, and listening assets.
+- [x] A learner sees the current lesson, completed lessons, and the next available step.
+- [x] Course and unit structure is versioned and validated against a runtime schema.
+- [x] Current position and lesson availability derive from learner progress rather than presentation-only state.
+- [x] Content data can represent accepted answer variants, explanations, and listening assets.
 
 **Verification:**
-- [ ] Schema checks accept valid sample content and reject malformed content.
-- [ ] Agent-browser verifies path states and resume position in Lightpanda where supported.
-- [ ] Chrome visual check covers desktop/mobile layout and focus states.
+- [x] Schema checks accept valid sample content and reject malformed content.
+- [x] Agent-browser verifies path states and resume position in Lightpanda where supported.
+- [x] Chrome visual check covers desktop/mobile layout and focus states.
 
 **Dependencies:** Task 6.
 
@@ -156,15 +156,15 @@
 **Description:** Implement a focused lesson session with choice, typed recall, and listening exercises; provide immediate feedback and explanations; persist attempts and completion.
 
 **Acceptance criteria:**
-- [ ] Lesson answers are validated and receive immediate correct/incorrect feedback with a useful explanation.
-- [ ] Accepted answer variants and listening assets are consumed from the course content contract.
-- [ ] Completing a lesson saves progress and allows resuming at the next step.
-- [ ] Lesson interaction works with keyboard and touch and exposes semantic answer states.
+- [x] Lesson answers are validated and receive immediate correct/incorrect feedback with a useful explanation.
+- [x] Accepted answer variants and listening assets are consumed from the course content contract.
+- [x] Completing a lesson saves progress and allows resuming at the next step.
+- [x] Lesson interaction works with keyboard and touch and exposes semantic answer states.
 
 **Verification:**
-- [ ] Unit checks cover scoring, accepted variants, and completion calculations.
-- [ ] Agent-browser completes representative correct and incorrect lesson paths in Lightpanda where supported.
-- [ ] Chrome visual check covers audio controls and reduced-motion behavior.
+- [x] Unit checks cover scoring, accepted variants, and completion calculations.
+- [x] Agent-browser completes representative correct and incorrect lesson paths in Lightpanda where supported.
+- [x] Chrome visual check covers audio controls and reduced-motion behavior.
 
 **Dependencies:** Task 7.
 
@@ -177,14 +177,14 @@
 **Description:** Implement a simple, explainable review scheduler for learned concepts and missed answers, then surface due material as a short review session and save outcomes.
 
 **Acceptance criteria:**
-- [ ] Correct and incorrect responses update a concept's next review time according to documented scheduler rules.
-- [ ] Due concepts are retrievable in a stable order and can be practiced in a review session.
-- [ ] Review attempts persist and are isolated to the learner.
-- [ ] Scheduler logic is pure and can be verified without browser or database dependencies.
+- [x] Correct and incorrect responses update a concept's next review time according to documented scheduler rules.
+- [x] Due concepts are retrievable in a stable order and can be practiced in a review session.
+- [x] Review attempts persist and are isolated to the learner.
+- [x] Scheduler logic is pure and can be verified without browser or database dependencies.
 
 **Verification:**
-- [ ] Unit checks cover interval boundaries, repeated correct answers, mistakes, and timezone/day boundaries.
-- [ ] Agent-browser completes a due-review flow and confirms progress survives reload.
+- [x] Unit checks cover interval boundaries, repeated correct answers, mistakes, and timezone/day boundaries.
+- [x] Agent-browser completes a due-review flow and confirms progress survives reload.
 
 **Dependencies:** Task 8.
 
@@ -194,9 +194,9 @@
 
 ## Checkpoint: Learning loop
 
-- [ ] A learner can onboard, complete a lesson, return, and complete a due review with progress preserved.
-- [ ] Auth boundaries and database policies are exercised with multiple learner accounts.
-- [ ] Lightpanda and Chrome verification paths are both exercised; unsupported engine behavior is recorded.
+- [x] A learner can onboard, complete a lesson, return, and complete a due review with progress preserved.
+- [x] Auth boundaries and database policies are exercised with multiple learner accounts.
+- [x] Lightpanda and Chrome verification paths are both exercised; unsupported engine behavior is recorded.
 
 ## Phase 3: Retention and Release Readiness
 
